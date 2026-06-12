@@ -41,7 +41,7 @@ You must follow this algorithm for making decisions when creating a mock
 - Find the required schema in the "components" or "definitions" section. If schema is not found, proceed to the steps in the "Errors" section.
 - Decide if a JSON mock can be made from this schema; if not, proceed to the steps in the "Errors" section.
 - Create a JSON mock based on the schema.
-- Answer the user with the obtained JSON mock.
+- Answer the user with the obtained JSON mock. Make sure the response contain mock ONLY, no markdown wrappers, no formatting
 
 ### Errors
 
@@ -119,10 +119,8 @@ User is requested to make a mock based on `Pet` schema.
 
 Your answer must be:
 
-```json
 {
   "id": 123,
   "name": "mr. Cat",
   "tag": "fluffy"
 }
-```
