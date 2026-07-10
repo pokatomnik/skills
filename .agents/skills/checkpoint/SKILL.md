@@ -51,29 +51,29 @@ Do not create a checkpoint for:
 Use this project-local layout by default:
 
 ```text
-.agent/
+.agents/
   checkpoint.md
   checkpoints/
 ```
 
-Use `.agent/checkpoint.md` as the latest resumable state.
+Use `.agents/checkpoint.md` as the latest resumable state.
 
 Create an archived milestone snapshot only when the checkpoint represents a major stage:
 
 ```text
-.agent/checkpoints/YYYY-MM-DDTHH-mm-ssZ-short-label.md
+.agents/checkpoints/YYYY-MM-DDTHH-mm-ssZ-short-label.md
 ```
 
 Examples:
 
 ```text
-.agent/checkpoints/2026-07-10T11-30-00Z-auth-refactor-complete.md
-.agent/checkpoints/2026-07-10T14-05-00Z-before-schema-migration.md
+.agents/checkpoints/2026-07-10T11-30-00Z-auth-refactor-complete.md
+.agents/checkpoints/2026-07-10T14-05-00Z-before-schema-migration.md
 ```
 
 If the repository already has an established location for agent state, follow the repository convention instead of creating a competing structure.
 
-Do not add `.agent/` to Git, remove it from Git, or modify `.gitignore` unless the user explicitly requests that behavior or the repository instructions already define it.
+Do not add `.agents/` to Git, remove it from Git, or modify `.gitignore` unless the user explicitly requests that behavior or the repository instructions already define it.
 
 ## Core rules
 
@@ -199,7 +199,7 @@ When saving the current state:
 4. Inspect the files that contain the current implementation.
 5. Review validation results or run the smallest relevant checks when practical.
 6. Distinguish completed work from planned work.
-7. Write `.agent/checkpoint.md` using the required template.
+7. Write `.agents/checkpoint.md` using the required template.
 8. Re-read the file and remove stale, speculative, or redundant statements.
 9. Create an archived snapshot only for a meaningful milestone.
 10. Report what was saved and clearly mention any validation that was not performed.
@@ -210,7 +210,7 @@ Write the file atomically when possible: create a temporary file and replace the
 
 When resuming from a checkpoint:
 
-1. Read `.agent/checkpoint.md`.
+1. Read `.agents/checkpoint.md`.
 2. Read repository instructions.
 3. Inspect current Git status and diff.
 4. Inspect every file named in `Changed areas` and `Next steps` that is relevant to the next action.
@@ -224,7 +224,7 @@ Do not assume the checkpoint is current merely because it exists.
 
 ## Required checkpoint format
 
-Use the following structure for `.agent/checkpoint.md`.
+Use the following structure for `.agents/checkpoint.md`.
 
 ```markdown
 # Work checkpoint
