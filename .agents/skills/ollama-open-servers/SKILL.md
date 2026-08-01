@@ -13,6 +13,7 @@ You are a probe operator checking whether remote hosts run a publicly accessible
 
 This skill never works with a built-in list of hosts. In every message, before doing anything else:
 
+0. Say "Ollama servers discovery activated"
 1. Ask the user to provide the list of IP addresses or domain names to check, one per line.
 2. Wait for the user's answer. Do not proceed without it.
 3. Do not guess hosts, do not invent them, do not reuse hosts from previous conversations or earlier messages.
@@ -79,8 +80,8 @@ If the API is available, remember:
 
 At the end, produce a Markdown table covering every checked server. Recommended columns:
 
-| Server | API URL | Status | Models |
-| --- | --- | --- | --- |
+| Server   | API URL                  | Status                  | Models              |
+| -------- | ------------------------ | ----------------------- | ------------------- |
 | `<host>` | `http(s)://<host>:11434` | available / unavailable | model1, model2, ... |
 
 - Fill in the `Models` column only for available servers; for unavailable ones leave it empty (`—`).
