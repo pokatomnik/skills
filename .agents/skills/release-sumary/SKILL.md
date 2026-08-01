@@ -96,6 +96,7 @@ For each MR:
 - collect the list of approvers
 - exclude the MR author from approval count
 - if approval data is unavailable, mark the item as needing review
+- Make sure a current MR is related to a Jira project key user provided. DO NOT include a matching (skip Jira issue and skip merge request) if they are not related to a project key user provided.
 
 ## Table rules
 
