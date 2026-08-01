@@ -46,6 +46,7 @@ npx skills add . -a zed -y
 - `caveman` — ultra-compressed communication mode
 - `github-issues` — fetch and rank GitHub issues from your own repositories
 - `mock-gen` — create a mock from an OpenAPI schema
+- `ollama-open-servers` — probe user-provided hosts for unauthenticated Ollama APIs on port 11434
 - `placeholders` — resolve `{{ ... | input }}` placeholders before execution
 - `rust-build-optimize` — add Rust build optimization settings to `Cargo.toml`
 - `rust-struct-convert` — convert JSON examples into Rust structs
@@ -64,6 +65,8 @@ The `skills` CLI discovers skills in supported agent directories. For Zed, the l
   github-issues/
     SKILL.md
   mock-gen/
+    SKILL.md
+  ollama-open-servers/
     SKILL.md
   placeholders/
     SKILL.md
